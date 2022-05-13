@@ -134,7 +134,11 @@ img {
     opacity: 1;
 }  
   
-@media (max-width: 768px) {
+@media (max-width: 500px) {
+
+    .container {
+        justify-content: center;
+    }
   
     .description__and__controls {
         flex-direction: column;
