@@ -7,7 +7,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.3rem;
     color: white;
 }
   
@@ -31,7 +31,7 @@ body{
     background-color: rgb(56, 56, 83);
     width: 90vmin;
     height: 90vmin;
-    border-radius: 15px;
+    border-radius: 1rem;
     padding-top: 5vmin;
 }
   
@@ -50,13 +50,13 @@ input {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 
 img {
     width: 100%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 1rem;
 }
 
 .description__and__controls {
@@ -115,6 +115,14 @@ img {
 #slide__4:checked ~ .description__and__controls .controls .control__4,
 #slide__5:checked ~ .description__and__controls .controls .control__5 {
     background: radial-gradient(#ffffff 25%, rgb(56, 56, 83) 30%, rgb(56, 56, 83) 35%, #ffffff 40%, rgb(56, 56, 83) 45%);
+}
+
+#slide__1:checked:hover ~ .description__and__controls .controls .control__1, 
+#slide__2:checked:hover ~ .description__and__controls .controls .control__2,
+#slide__3:checked:hover ~ .description__and__controls .controls .control__3, 
+#slide__4:checked:hover ~ .description__and__controls .controls .control__4,
+#slide__5:checked:hover ~ .description__and__controls .controls .control__5 {
+    background: radial-gradient( rgb(139, 139, 235) 25%, rgb(56, 56, 83) 30%, rgb(56, 56, 83) 35%, #ffffff 40%, rgb(56, 56, 83) 45%);
 }
   
 #slide__1:checked ~ .description__and__controls .text__area .text__1, 
