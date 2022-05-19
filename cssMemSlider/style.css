@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: white;
+}
+  
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    height: 100vh;
+    background-color: rgb(54, 54, 54);
+}
+
+.title {
+    text-align: center;
+}
+
+.slider-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(56, 56, 83);
+    width: 90vmin;
+    height: 90vmin;
+    border-radius: 1rem;
+    padding-top: 5vmin;
+}
+  
+input {
+    display: none;
+}
+  
+.slider {
+    position: relative;
+    width: 80vmin;
+    height: 70vmin;
+    margin-bottom: 3vmin;
+}
+  
+.mem {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.description__and__controls {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 80vmin;
+    height: 5vmin;
+}
+  
+.text__area {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    font-size: 1.2rem;
+}
+  
+.text {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+}
+  
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+  
+.control {
+    width: 5vmin;
+    height: 5vmin;
+    border-radius: 50%;
+    background: radial-gradient(rgb(56, 56, 83) 35%, #ffffff 40%, rgb(56, 56, 83) 45%);
+    cursor: pointer;
+}
+  
+.control:hover {
+    background: radial-gradient( rgb(139, 139, 235) 25%, rgb(56, 56, 83) 30%, rgb(56, 56, 83) 35%, #ffffff 40%, rgb(56, 56, 83) 45%);
+}
+  
+.mem, .text {
+    visibility: hidden;
+    transform: translateX(0);
+    transition-duration: 2s;
+    opacity: 0;
+}
+  
+#slide__1:checked ~ .description__and__controls .controls .control__1, 
+#slide__2:checked ~ .description__and__controls .controls .control__2,
+#slide__3:checked ~ .description__and__controls .controls .control__3, 
+#slide__4:checked ~ .description__and__controls .controls .control__4,
+#slide__5:checked ~ .description__and__controls .controls .control__5 {
+    background: radial-gradient(#ffffff 25%, rgb(56, 56, 83) 30%, rgb(56, 56, 83) 35%, #ffffff 40%, rgb(56, 56, 83) 45%);
+}
+
+#slide__1:checked:hover ~ .description__and__controls .controls .control__1, 
+#slide__2:checked:hover ~ .description__and__controls .controls .control__2,
+#slide__3:checked:hover ~ .description__and__controls .controls .control__3, 
+#slide__4:checked:hover ~ .description__and__controls .controls .control__4,
+#slide__5:checked:hover ~ .description__and__controls .controls .control__5 {
+    background: radial-gradient( rgb(139, 139, 235) 25%, rgb(56, 56, 83) 30%, rgb(56, 56, 83) 35%, #ffffff 40%, rgb(56, 56, 83) 45%);
+}
+  
+#slide__1:checked ~ .description__and__controls .text__area .text__1, 
+#slide__2:checked ~ .description__and__controls .text__area .text__2,
+#slide__3:checked ~ .description__and__controls .text__area .text__3, 
+#slide__4:checked ~ .description__and__controls .text__area .text__4,
+#slide__5:checked ~ .description__and__controls .text__area .text__5,
+#slide__1:checked ~ .slider .mem__1, 
+#slide__2:checked ~ .slider .mem__2,
+#slide__3:checked ~ .slider .mem__3, 
+#slide__4:checked ~ .slider .mem__4,
+#slide__5:checked ~ .slider .mem__5 {
+    visibility: visible;
+    transform: translateX(0);
+    transition: 2s;
+    transition-delay: 1s;
+    opacity: 1;
+}  
+  
+@media (max-width: 500px) {
+
+    .container {
+        justify-content: center;
+    }
+  
+    .description__and__controls {
+        flex-direction: column;
+        height: 20vmin;
+    }
+  
+    .text__area {
+        width: 100%;
+        order: 1;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+  
+    .controls {
+        width: 100%;
+        align-items: end;
+    }
+  
+    .control {
+        display: flex;
+        height: 6vmin;
+        width: 6vmin;
+    }
+}
+
+
